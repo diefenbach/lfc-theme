@@ -1,0 +1,26 @@
+{% extends "lfc/base.html" %}
+{% load portlets_tags %}
+
+{% block section %}article{% endblock %}
+
+{% block content %}
+    {% if lfc_object.display_title %}
+        <h1 class="first-heading">{{ lfc_object.title }}</h1>
+    {% endif %}
+    
+    <div class="blog-entry">
+        {% if lfc_object.get_image %}
+            <a href="{{ lfc_object.get_image.image.url_800x800 }}"
+               class="photo-image"
+               title="{{lfc_object.get_image.title }}">
+                <img class="left"
+                     src="{{ lfc_object.get_image.image.url_200x200 }}"
+                     alt="{{ lfc_object.get_image.image.title }}"
+                     title="{{ lfc_object.get_image.image.title }}" />
+            </a>
+        {% endif %}
+        <div>
+            {{ lfc_object.text|safe }}
+        </div>
+    </div>
+{% endblock %}

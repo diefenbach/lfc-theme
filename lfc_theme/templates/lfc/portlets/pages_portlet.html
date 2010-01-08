@@ -1,0 +1,19 @@
+{% if pages %}
+    <div class="portlet pages-portlet">
+        <div class="portlet-header">
+            {{ title }}
+        </div>
+        <div class="portlet-body">
+            {% for page in pages %}
+                <div class="portlet-item">
+                    <a href="{{ page.get_absolute_url }}">
+                        {{ page.title }}
+                    </a>
+                </div>
+                <div class="news-date">
+                    {{ page.creation_date|date:"d.m.Y" }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>    
+{% endif %}

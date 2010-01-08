@@ -1,0 +1,9 @@
+{% load i18n %}
+<ul>
+    {% for page in pages %}
+        <li id="tab{{ forloop.counter }}">
+            <a class="{{ language }} {% if page.current %}selected{% endif %}"
+                href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+        </li>
+    {% endfor %}
+</ul>

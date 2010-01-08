@@ -1,0 +1,11 @@
+{% load i18n %}
+<ul class="recent-twitters">    
+    {% for entry in entries %}
+        <li class="news-entry">
+            {{ entry.summary }}
+            {# <div class="news-date"> #}
+            {#     {{ entry.date|date:"d.m.Y - H:i" }} #}
+            {# </div> #}
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,158 @@
+{% load i18n %}
+{% load lfc_tags %}
+{% load portlets_tags %}
+{% load lfc_theme_tags %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>{{ PORTAL.title }} - {{ lfc_object.title }}</title>
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href='/rss/blog' />
+
+        <meta name="generator" content="LFC - Lightning Fast CMS" />
+        {% if lfc_object.get_meta_keywords %}<meta name="keywords" content="{{lfc_object.get_meta_keywords}}" />{% endif %}
+        {% if lfc_object.get_meta_description %}<meta name="description" content="{{lfc_object.get_meta_description}}" />{% endif %}
+
+        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc/lightbox/css/jquery.lightbox-0.5.css">
+        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc/yui/reset-fonts.css">
+        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc/blueprint/src/grid.css">
+        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc_theme/css/lfc.css">
+        {% block css %}{% endblock %}
+
+        <script type="text/javascript" src="{{ MEDIA_URL }}lfc/jquery/jquery.pack.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}lfc/jquery/jquery.tools.min.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}lfc/lightbox/js/jquery.lightbox-0.5.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}lfc_theme/js/lfctheme.js"></script>
+
+        {% block javascript %}{% endblock %}
+    </head>
+    <body class="{{ lfc_object.slug }} {% block section %}{% endblock %}">
+        <div id="header">
+            {% if user.is_authenticated %}
+                <div class="container">
+                    <div id="login" class="span-24 last">
+                        <span class="site-actions">
+                            {% if user.last_name %}
+                                <span>{{user.first_name}} {{user.last_name}}</span>
+                            {% else %}
+                                <span>{{ user.username }}</span>
+                            {% endif %}
+                            | <a class="site-action" href="{% url lfc_logout %}">{% trans "Logout" %}</a>
+                            {% if lfc_object %}
+                                | <a class="site-action" href="{% url lfc_manage_page lfc_object.id %}">{% trans "Manage" %}</a>
+                            {% else %}
+                                | <a class="site-action" href="{% url lfc_manage_portal %}">{% trans "Manage" %}</a>
+                            {% endif %}
+                        </span>
+                    </div>
+                </div>
+
+            {% endif %}
+
+            {% if LFC_MULTILANGUAGE %}
+                <div class="container logo">
+                    <div class="span-18">
+                        <h1 class="logo"><a href="{{ portal.get_absolute_url }}">LFC</a></h1>
+                    </div>
+                    <div class="span-6 last flags">
+                        &nbsp;
+                        {% if lfc_object %}
+                            <a href='{% url lfc_set_language language="de" id=lfc_object.id %}'>
+                                {% trans 'German' %}</a> |
+                            <a href='{% url lfc_set_language language="en" id=lfc_object.id %}'>
+                                {% trans 'English' %}</a>
+                        {% else %}
+                            <a href='{% url lfc_set_language language="de" %}'>
+                                {% trans 'German' %}</a> |
+                            <a href='{% url lfc_set_language language="en" %}'>
+                                {% trans 'English' %}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% else %}
+                <div class="container logo">
+                    <div class="span-24">
+                        <h1 class="logo"><a href="{{ portal.get_absolute_url }}">LFC</a></h1>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <div id="tabs">
+            <div class="container">
+                <div class="span-16">
+                    {% if lfc_object %}
+                        {% tabs lfc_object %}
+                    {% else %}
+                        {% tabs %}
+                    {% endif %}
+                </div>
+                <div class="span-8 last search-form">
+                    <form action='{% url lfc_search language=LANGUAGE_CODE %}'>
+                        <input type="text"
+                               class="search"
+                               name="q" />
+
+                        <input type="submit"
+                               value="{% trans 'Search' %}" />
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        {% slots_information %}
+
+        {% block wrapper %}
+            <div id="content">
+                <div class="container">
+                    {% if SlotLeft %}
+                        <div class="span-5">
+                            <div class="left-slot">
+                                {% block left-slot %}
+                                    {% portlet_slot 'Left' lfc_object %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="{{ content_class }}">
+                        <div class="middle-slot">
+                            {% breadcrumbs %}
+                            {% block content %}{% endblock %}
+                            {% block comments %}{% endblock %}
+                        </div>
+                    </div>
+
+                    {% if SlotRight %}
+                        <div class="span-5 last">
+                            <div class="rights-slot">
+                                {% block right-slot %}
+                                    {% portlet_slot 'Right' lfc_object %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endblock %}
+
+        <div id="footer">
+            <div class="container">
+            </div>
+        </div>
+
+        <div id="colophon">
+            <div class="container">
+                <div class="span-24">
+                    <p>{% trans 'Powered by' %} <a target="_blank" href="http://www.getlfs.com">LFC</a> &mdash; Lightning Fast CMS</p>
+                    <p>
+                        LFC {% trans 'is a product of' %} <a target="_blank" href="http://www.iqpp.de">iqplusplus</a>
+                        &mdash; &copy; 2009 <a target="_blank" href="http://www.iqpp.de">iqplusplus</a> &mdash; {% trans 'All rights reserved' %}
+                    </p>
+                    <p>{% trans 'Distributed under the' %} <a target="_blank" href="http://www.opensource.org/licenses/bsd-license.php">{% trans 'BSD-License' %}</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

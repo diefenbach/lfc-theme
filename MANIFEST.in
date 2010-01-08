@@ -1,0 +1,3 @@
+include README.txt
+recursive-include lfc_theme/templates *
+recursive-include lfc_theme/locale *

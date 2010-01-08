@@ -1,0 +1,20 @@
+{% load lfc_tags %}
+
+{% if show_level %}
+    {% if pages %}
+        <ul>
+            {% for page in pages %}
+                <li class="level-{{ page.level }} {% if page.is_current %}current{% endif %}">
+                    <a href="{{ page.url }}">
+                        {{ page.title }}
+                    </a>
+                    {{ page.children }}
+                </li>                
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% else %}
+    {% for page in pages %}
+        {{ page.children }}
+    {% endfor %}
+{% endif %}
