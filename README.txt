@@ -1,6 +1,8 @@
 What is it?
 ===========
 
+The default theme for `LFC <http://pypi.python.org/pypi/django-lfc/>`
+
 Features:
 =========
 

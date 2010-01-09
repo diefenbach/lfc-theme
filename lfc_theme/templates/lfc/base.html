@@ -40,7 +40,7 @@
                             {% endif %}
                             | <a class="site-action" href="{% url lfc_logout %}">{% trans "Logout" %}</a>
                             {% if lfc_object %}
-                                | <a class="site-action" href="{% url lfc_manage_page lfc_object.id %}">{% trans "Manage" %}</a>
+                                | <a class="site-action" href="{% url lfc_manage_object lfc_object.id %}">{% trans "Manage" %}</a>
                             {% else %}
                                 | <a class="site-action" href="{% url lfc_manage_portal %}">{% trans "Manage" %}</a>
                             {% endif %}
@@ -119,8 +119,8 @@
                     <div class="{{ content_class }}">
                         <div class="middle-slot">
                             {% breadcrumbs %}
-                            {% block content %}{% endblock %}
-                            {% block comments %}{% endblock %}
+                            {% block content %}{% endblock %}                            
+                            {% include "comments/comments.html" %}
                         </div>
                     </div>
 
