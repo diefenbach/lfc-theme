@@ -53,7 +53,7 @@
             {% if LFC_MULTILANGUAGE %}
                 <div class="container logo">
                     <div class="span-18">
-                        <h1 class="logo"><a href="{{ portal.get_absolute_url }}">LFC</a></h1>
+                        <h1 class="logo"><a href="/{{ lfc_object.language }}">LFC</a></h1>
                     </div>
                     <div class="span-6 last flags">
                         &nbsp;
@@ -111,7 +111,7 @@
                         <div class="span-5">
                             <div class="left-slot">
                                 {% block left-slot %}
-                                    {% portlet_slot 'Left' lfc_object %}
+                                    {% portlet_slot 'Left' lfc_object.get_specific_type %}
                                 {% endblock %}
                             </div>
                         </div>
@@ -119,8 +119,9 @@
                     <div class="{{ content_class }}">
                         <div class="middle-slot">
                             {% breadcrumbs %}
-                            {% block content %}{% endblock %}                            
-                            {% include "comments/comments.html" %}
+                            {% block content %}
+                                {% include "comments/comments.html" %}
+                            {% endblock %}
                         </div>
                     </div>
 
@@ -128,7 +129,7 @@
                         <div class="span-5 last">
                             <div class="rights-slot">
                                 {% block right-slot %}
-                                    {% portlet_slot 'Right' lfc_object %}
+                                    {% portlet_slot 'Right' lfc_object.get_specific_type %}
                                 {% endblock %}
                             </div>
                         </div>

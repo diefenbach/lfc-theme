@@ -5,7 +5,8 @@
         <ul>
             {% for page in pages %}
                 <li class="level-{{ page.level }} {% if page.is_current %}current{% endif %}">
-                    <a href="{{ page.url }}">
+                    <a class="{% if page.is_current %}current{% endif %}"
+                       href="{{ page.url }}">
                         {{ page.title }}
                     </a>
                     {{ page.children }}

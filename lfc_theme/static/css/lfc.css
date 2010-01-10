@@ -333,10 +333,18 @@ ul.breadcrumbs li {
     padding: 5px 0;
 }
 
-li.current a {
+.navigation-portlet a.current {
     font-weight: bold;
     color: black !important;
 }
+
+
+.navigation-portlet .level-2,
+.navigation-portlet .level-3,
+.navigation-portlet .level-4 {
+    padding-left: 20px;
+}
+
 
 /* Search */
 .search-form {
