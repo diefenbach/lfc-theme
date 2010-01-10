@@ -2,18 +2,18 @@
 {% load lfc_tags %}
 {% if show_level %}
     <ul>
-        {% for page in pages %}
-            <li class="level-{{ page.level}} {% if page.is_current %}current{% endif %}">
-                <a class="{% if page.is_current %}current{% endif %}"
-                   href="{{ page.url }}">
-                    {{ page.title }}
+        {% for obj in objs %}
+            <li class="level-{{ obj.level}} {% if obj.is_current %}current{% endif %}">
+                <a class="{% if obj.is_current %}current{% endif %}"
+                   href="{{ obj.url }}">
+                    {{ obj.title }}
                 </a>
-                {{ page.children }}
+                {{ obj.children }}
             </li>                    
         {% endfor %}
     </ul>
 {% else %}
-    {% for page in pages %}
-        {{ page.children }}
+    {% for obj in objs %}
+        {{ obj.children }}
     {% endfor %}
 {% endif %}

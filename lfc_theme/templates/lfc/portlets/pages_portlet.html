@@ -1,17 +1,17 @@
-{% if pages %}
-    <div class="portlet pages-portlet">
+{% if objs %}
+    <div class="portlet objects-portlet">
         <div class="portlet-header">
             {{ title }}
         </div>
         <div class="portlet-body">
-            {% for page in pages %}
+            {% for obj in objs %}
                 <div class="portlet-item">
-                    <a href="{{ page.get_absolute_url }}">
-                        {{ page.title }}
+                    <a href="{{ obj.get_absolute_url }}">
+                        {{ obj.title }}
                     </a>
                 </div>
                 <div class="news-date">
-                    {{ page.creation_date|date:"d.m.Y" }}
+                    {{ obj.creation_date|date:"d.m.Y" }}
                 </div>
             {% endfor %}
         </div>
