@@ -1,0 +1,9 @@
+{% load i18n %}
+<ul>
+    {% for obj in objs %}
+        <li class="{% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}"> 
+            <a class="{{ language }} {% if obj.current %}selected{% endif %}"
+               href="{{ obj.get_absolute_url }}">{{ obj.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
