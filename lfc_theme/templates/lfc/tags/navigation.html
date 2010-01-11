@@ -3,8 +3,8 @@
 {% if show_level %}
     <ul>
         {% for obj in objs %}
-            <li class="level-{{ obj.level}} {% if obj.is_current %}current{% endif %}">
-                <a class="{% if obj.is_current %}current{% endif %}"
+            <li class="level-{{ obj.level }} {% if obj.is_current %}current{% endif %}">
+                <a class="level-{{ obj.level }} {% if obj.is_current %}current{% endif %}"
                    href="{{ obj.url }}">
                     {{ obj.title }}
                 </a>
