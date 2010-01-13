@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-23 17:21+0200\n"
+"POT-Creation-Date: 2010-01-13 16:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,11 +15,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: templates/comments/form.html:14 templates/comments/preview.html:26
+#: templates/404.html:7
+msgid "Sorry"
+msgstr "Entschuldigung"
+
+#: templates/404.html:8
+msgid "The page you have requested can't be found!"
+msgstr "Die Seite, die Sie angefordert haben konnte nicht gefunden werden."
+
+#: templates/comments/comments.html:8
+msgid "Comments"
+msgstr "Kommentare"
+
+#: templates/comments/comments.html:31
+msgid "Leave a comment"
+msgstr "Kommentieren"
+
+#: templates/comments/form.html:15 templates/comments/preview.html:25
 msgid "(will not be published)"
 msgstr "(wird nicht veröffentlicht)"
 
-#: templates/comments/form.html:36 templates/comments/preview.html:46
+#: templates/comments/form.html:37 templates/comments/preview.html:44
 msgid "Post"
 msgstr "Absenden"
 
@@ -35,7 +51,7 @@ msgstr "Vielen Dank für Ihre Nachricht!"
 msgid "Back to page"
 msgstr "Zurück zur Seite"
 
-#: templates/comments/preview.html:4 templates/comments/preview.html.py:12
+#: templates/comments/preview.html:5 templates/comments/preview.html.py:12
 msgid "Preview your comment"
 msgstr "Vorschau Ihres Kommentars"
 
@@ -57,67 +73,57 @@ msgstr "Kommentar absenden"
 msgid "or make changes"
 msgstr "oder Änderungen vornehmen"
 
-#: templates/lfc/base.html:90 templates/lfc/search_results.html:23
-msgid "Search"
-msgstr "Suche"
+#: templates/contact_form/contact_form.html:9
+msgid "Contact"
+msgstr "Kontakt"
 
-#: templates/lfc/base.html:140
-msgid "Powered by"
-msgstr "Powered by"
-
-#: templates/lfc/base.html:142
-msgid "All rights reserved"
-msgstr "Alle Rechte vorbehalten"
-
-#: templates/lfc/blog_archive.html:10 templates/lfc/page_list.html:10
-msgid "Entries for"
-msgstr "Einträge für"
-
-#: templates/lfc/blog_archive.html:18 templates/lfc/page_list.html:18
-#: templates/lfc/templates/blog.html:27
-#: templates/lfc/templates/blog_entry.html:14
-msgid "Posted on"
-msgstr "Veröffentlicht am"
-
-#: templates/lfc/blog_archive.html:20 templates/lfc/page_list.html:20
-#: templates/lfc/templates/blog.html:29
-#: templates/lfc/templates/blog_entry.html:16
-msgid "by"
-msgstr "von"
-
-#: templates/lfc/blog_archive.html:25 templates/lfc/page_list.html:25
-#: templates/lfc/templates/blog.html:34
-#: templates/lfc/templates/blog_entry.html:21
-msgid "within"
-msgstr "unter"
-
-#: templates/lfc/blog_archive.html:35 templates/lfc/page_list.html:35
-#: templates/lfc/templates/blog.html:44
-#: templates/lfc/templates/blog_entry.html:31
-msgid "One comment"
-msgstr "Ein Kommentar"
-
-#: templates/lfc/blog_archive.html:37 templates/lfc/page_list.html:37
-#: templates/lfc/templates/blog.html:46
-#: templates/lfc/templates/blog_entry.html:33
-msgid "comments"
-msgstr "Kommentare"
-
-#: templates/lfc/breadcrumbs.html:4
-msgid "You are here"
-msgstr "Sie sind hier"
-
-#: templates/lfc/contact_form.html:7 templates/lfc/search_results.html:7
-msgid "Search results"
-msgstr "Suchresultate"
-
-#: templates/lfc/contact_form.html:30 templates/lfc/templates/contact.html:27
+#: templates/contact_form/contact_form.html:20
 msgid "Send"
 msgstr "Absenden"
 
-#: templates/lfc/files.html:3
-msgid "Files"
-msgstr "Dateien"
+#: templates/contact_form/contact_form_sent.html:9
+msgid "Thank you!"
+msgstr "Vielen Dank!"
+
+#: templates/lfc/base.html:41
+msgid "Logout"
+msgstr "Abmelden"
+
+#: templates/lfc/base.html:43 templates/lfc/base.html.py:45
+msgid "Manage"
+msgstr "Verwalten"
+
+#: templates/lfc/base.html:62 templates/lfc/base.html.py:67
+msgid "German"
+msgstr "Deutsch"
+
+#: templates/lfc/base.html:64 templates/lfc/base.html.py:69
+msgid "English"
+msgstr "Englisch"
+
+#: templates/lfc/base.html:98 templates/lfc/search_results.html:23
+msgid "Search"
+msgstr "Suche"
+
+#: templates/lfc/base.html:149
+msgid "Powered by"
+msgstr "Powered by"
+
+#: templates/lfc/base.html:151
+msgid "is a product of"
+msgstr "ist ein Produkt von"
+
+#: templates/lfc/base.html:152
+msgid "All rights reserved"
+msgstr "Alle Rechte vorbehalten"
+
+#: templates/lfc/base.html:154
+msgid "Distributed under the"
+msgstr "Verteilt unter der"
+
+#: templates/lfc/base.html:154
+msgid "BSD-License"
+msgstr "BSD-Lizenz"
 
 #: templates/lfc/logged_out.html:5
 msgid "You are now logged out."
@@ -139,6 +145,10 @@ msgstr "Bitte geben Sie Ihren Benutzername und Ihr Passwort ein."
 msgid "Log in"
 msgstr "Anmelden"
 
+#: templates/lfc/search_results.html:7
+msgid "Search results"
+msgstr "Suchresultate"
+
 #: templates/lfc/search_results.html:29
 msgid "You searched for"
 msgstr "Sie suchten nach"
@@ -158,26 +168,21 @@ msgstr "Weiterlesen"
 msgid "There are no results."
 msgstr "Es wurde nichts gefunden."
 
-#: templates/lfc/portlets/blog_portlet.html:24
-msgid "Archive"
-msgstr "Archiv"
-
-#: templates/lfc/portlets/blog_portlet.html:39
-#: templates/lfc/portlets/tag_cloud_portlet.html:8
-msgid "Topics"
-msgstr "Themen"
-
 #: templates/lfc/portlets/related_pages.html:7
 msgid "Related pages"
 msgstr "Passende Seiten"
 
-#: templates/lfc/templates/blog_entry.html:61
-msgid "Comments"
-msgstr "Kommentare"
+#: templates/lfc/portlets/tag_cloud_portlet.html:8
+msgid "Topics"
+msgstr "Themen"
 
-#: templates/lfc/templates/blog_entry.html:86
-msgid "Leave a comment"
-msgstr "Kommentieren"
+#: templates/lfc/tags/breadcrumbs.html:4
+msgid "You are here"
+msgstr "Sie sind hier"
+
+#: templates/lfc/tags/files.html:3
+msgid "Files"
+msgstr "Dateien"
 
 #: templates/pagination/pagination.html:5
 #: templates/pagination/pagination.html:7
@@ -189,7 +194,7 @@ msgstr "Vorherige Seite"
 msgid "Next page"
 msgstr "Nächste Seite"
 
-#: templatetags/lfc_theme_tags.py:37
+#: templatetags/lfc_theme_tags.py:39
 #, python-format
 msgid "%s tag needs no argument"
 msgstr ""
