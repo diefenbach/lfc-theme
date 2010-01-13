@@ -11,7 +11,7 @@ class SlotsInformationNode(Node):
     """
     """
     def render(self, context):
-        page = context.get("lfc_object")
+        page = context.get("lfc_context")
         if page:
             page = page.get_specific_type()
 

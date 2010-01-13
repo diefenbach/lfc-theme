@@ -6,13 +6,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-        <title>{{ PORTAL.title }} - {{ lfc_object.title }}</title>
+        <title>{{ PORTAL.title }} - {{ lfc_context.title }}</title>
 
         <link rel="alternate" type="application/rss+xml" title="RSS" href='/rss/blog' />
 
         <meta name="generator" content="LFC - Lightning Fast CMS" />
-        {% if lfc_object.get_meta_keywords %}<meta name="keywords" content="{{lfc_object.get_meta_keywords}}" />{% endif %}
-        {% if lfc_object.get_meta_description %}<meta name="description" content="{{lfc_object.get_meta_description}}" />{% endif %}
+        {% if lfc_context.get_meta_keywords %}<meta name="keywords" content="{{lfc_context.get_meta_keywords}}" />{% endif %}
+        {% if lfc_context.get_meta_description %}<meta name="description" content="{{lfc_context.get_meta_description}}" />{% endif %}
 
         <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc/lightbox/css/jquery.lightbox-0.5.css">
         <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc/yui/reset-fonts.css">
@@ -27,7 +27,7 @@
 
         {% block javascript %}{% endblock %}
     </head>
-    <body class="{{ lfc_object.slug }} {% block section %}{% endblock %}">
+    <body class="{{ lfc_context.slug }} {% block section %}{% endblock %}">
         <div id="header">
             {% if user.is_authenticated %}
                 <div class="container">
@@ -39,8 +39,8 @@
                                 <span>{{ user.username }}</span>
                             {% endif %}
                             | <a class="site-action" href="{% url lfc_logout %}">{% trans "Logout" %}</a>
-                            {% if lfc_object %}
-                                | <a class="site-action" href="{% url lfc_manage_object lfc_object.id %}">{% trans "Manage" %}</a>
+                            {% if lfc_context %}
+                                | <a class="site-action" href="{% url lfc_manage_object lfc_context.id %}">{% trans "Manage" %}</a>
                             {% else %}
                                 | <a class="site-action" href="{% url lfc_manage_portal %}">{% trans "Manage" %}</a>
                             {% endif %}
@@ -53,14 +53,14 @@
             {% if LFC_MULTILANGUAGE %}
                 <div class="container logo">
                     <div class="span-18">
-                        <h1 class="logo"><a href="/{{ lfc_object.language }}">LFC</a></h1>
+                        <h1 class="logo"><a href="/{{ lfc_context.language }}">LFC</a></h1>
                     </div>
                     <div class="span-6 last flags">
                         &nbsp;
-                        {% if lfc_object %}
-                            <a href='{% url lfc_set_language language="de" id=lfc_object.id %}'>
+                        {% if lfc_context %}
+                            <a href='{% url lfc_set_language language="de" id=lfc_context.id %}'>
                                 {% trans 'German' %}</a> |
-                            <a href='{% url lfc_set_language language="en" id=lfc_object.id %}'>
+                            <a href='{% url lfc_set_language language="en" id=lfc_context.id %}'>
                                 {% trans 'English' %}</a>
                         {% else %}
                             <a href='{% url lfc_set_language language="de" %}'>
@@ -82,8 +82,8 @@
         <div id="tabs">
             <div class="container">
                 <div class="span-16">
-                    {% if lfc_object %}
-                        {% tabs lfc_object %}
+                    {% if lfc_context %}
+                        {% tabs lfc_context %}
                     {% else %}
                         {% tabs %}
                     {% endif %}
@@ -111,7 +111,7 @@
                         <div class="span-5">
                             <div class="left-slot">
                                 {% block left-slot %}
-                                    {% portlet_slot 'Left' lfc_object.get_specific_type %}
+                                    {% portlet_slot 'Left' lfc_context.get_specific_type %}
                                 {% endblock %}
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                         <div class="span-5 last">
                             <div class="rights-slot">
                                 {% block right-slot %}
-                                    {% portlet_slot 'Right' lfc_object.get_specific_type %}
+                                    {% portlet_slot 'Right' lfc_context.get_specific_type %}
                                 {% endblock %}
                             </div>
                         </div>

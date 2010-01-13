@@ -8,10 +8,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ lfc_object.title }}</h1>
+    <h1>{{ lfc_context.title }}</h1>
 
-    {% if lfc_object.text %}
-        {{ lfc_object.text|safe }}
+    {% if lfc_context.text %}
+        {{ lfc_context.text|safe }}
     {% endif %}
 
     <form action='{% url lfc_search "en" %}'>

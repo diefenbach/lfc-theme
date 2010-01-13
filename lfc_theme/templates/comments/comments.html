@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load comments %}
-{% if lfc_object %}
-    {% get_comment_list for lfc_object as comment_list %}
+{% if lfc_context %}
+    {% get_comment_list for lfc_context as comment_list %}
 
     {% if comment_list %}
         <h2 class="underlined">
@@ -27,9 +27,9 @@
 
     {% endif %}
 
-    {% if lfc_object.are_comments_allowed %}
+    {% if lfc_context.are_comments_allowed %}
         <h2 class="underlined">{% trans 'Leave a comment' %}</h2>
-        {% render_comment_form for lfc_object %}
+        {% render_comment_form for lfc_context %}
     {% endif %}                                
 {% endif %}
 
