@@ -11,9 +11,9 @@ class SlotsInformationNode(Node):
     """
     """
     def render(self, context):
-        page = context.get("lfc_context")
+        page = context.get("lfc_object")
         if page:
-            page = page.get_specific_type()
+            page = page.get_content_object()
 
         for slot in Slot.objects.all():
             context["Slot%s" % slot.name] = portlets.utils.has_portlets(slot, page)
