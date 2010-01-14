@@ -57,17 +57,16 @@
                     </div>
                     <div class="span-6 last flags">
                         &nbsp;
-                        {% if lfc_context %}
-                            <a href='{% url lfc_set_language language="de" id=lfc_context.id %}'>
-                                {% trans 'German' %}</a> |
-                            <a href='{% url lfc_set_language language="en" id=lfc_context.id %}'>
-                                {% trans 'English' %}</a>
-                        {% else %}
-                            <a href='{% url lfc_set_language language="de" %}'>
-                                {% trans 'German' %}</a> |
-                            <a href='{% url lfc_set_language language="en" %}'>
-                                {% trans 'English' %}</a>
-                        {% endif %}
+                        {% lfc_languages %}
+                        {% for language in lfc_languages %}
+                            {% if language.is_available %}
+                                <a href='{% url lfc_set_language language.code lfc_context.id %}'>
+                                    {% trans language.name %}</a>
+                            {% else %}
+                                <span>{% trans language.name %}</a>
+                            {% endif %}
+                                {% if not forloop.last %}|{% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             {% else %}
