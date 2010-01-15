@@ -20,7 +20,7 @@
         <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc_theme/css/lfc.css">
         {% block css %}{% endblock %}
 
-        <script type="text/javascript" src="{{ MEDIA_URL }}lfc/jquery/jquery.pack.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}lfc/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}lfc/jquery/jquery.tools.min.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}lfc/lightbox/js/jquery.lightbox-0.5.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}lfc_theme/js/lfctheme.js"></script>
@@ -60,8 +60,13 @@
                         {% lfc_languages %}
                         {% for language in lfc_languages %}
                             {% if language.is_available %}
-                                <a href='{% url lfc_set_language language.code lfc_context.id %}'>
-                                    {% trans language.name %}</a>
+                                {% if lfc_context %}
+                                    <a href='{% url lfc_set_language language.code lfc_context.id %}'>
+                                        {% trans language.name %}</a>
+                                {% else %}
+                                    <a href='{% url lfc_set_language language.code %}'>
+                                        {% trans language.name %}</a>
+                                {% endif %}
                             {% else %}
                                 <span>{% trans language.name %}</a>
                             {% endif %}
