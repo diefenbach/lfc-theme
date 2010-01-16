@@ -28,10 +28,14 @@
         {% block javascript %}{% endblock %}
     </head>
     <body class="{{ lfc_context.slug }} {% block section %}{% endblock %}">
-        <div id="header">
-            {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
+
+            <div id="management">
                 <div class="container">
-                    <div id="login" class="span-24 last">
+                    <div class="span-12">
+                        {% templates %}
+                    </div>
+                    <div id="login" class="span-12 last">
                         <span class="site-actions">
                             {% if user.last_name %}
                                 <span>{{user.first_name}} {{user.last_name}}</span>
@@ -47,9 +51,9 @@
                         </span>
                     </div>
                 </div>
-
-            {% endif %}
-
+            </div>
+        {% endif %}
+        <div id="header">
             {% if LFC_MULTILANGUAGE %}
                 <div class="container logo">
                     <div class="span-18">

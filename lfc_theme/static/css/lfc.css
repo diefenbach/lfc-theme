@@ -83,6 +83,15 @@ h2.blog-entry {
     padding-right: 30px;
 }
 
+#management {
+    background-color: #ddd;
+    margin: 0;
+}
+
+#management .container {
+    line-height: 30px;
+}
+
 #header {
     background-color: #b85018;
     color: black;
@@ -95,7 +104,6 @@ h2.blog-entry {
 
 #login {
     text-align: right;
-    padding-bottom: 20px;
 }
 
 /* tabs */
