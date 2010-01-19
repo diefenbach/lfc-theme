@@ -4,9 +4,9 @@
 {% tag_cloud_for_model lfc.Page as cloud with steps=6 min_count=1 distribution=log %}
 {% if cloud %}
     <div class="portlet tag-cloud-portlet">
-        <div class="portlet-header">
+        <h1 class="portlet-header">
             {% trans 'Topics' %}
-        </div>
+        </h1>
         <div class="portlet-body tag-cloud">
             <div class="portlet-item">
                 {% for tag in cloud %}
