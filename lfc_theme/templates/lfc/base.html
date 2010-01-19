@@ -127,9 +127,11 @@
                     <div class="{{ content_class }}">
                         <div class="middle-slot">
                             {% breadcrumbs %}
-                            {% block content %}
-                                {% include "comments/comments.html" %}
+                            {% block content %}                                
                             {% endblock %}
+                            {% block comments %}
+                                {% include "comments/comments.html" %}
+                            {% endblock %}                            
                         </div>
                     </div>
 
