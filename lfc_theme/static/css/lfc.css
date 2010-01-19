@@ -302,17 +302,15 @@ ul.breadcrumbs li {
     color: #555;
 }
 
-.portlet-header {
-    color: #24241c;
-}
-
 .portlet-header .first {
     margin: 0px 0 2px 0;
 }
 
 .portlet-header {
+    color: #24241c;
     font-size: 138.5%;
-    margin: 20px 0 2px 0;
+    font-weight: normal;
+    margin: 0 0 2px 0;
     padding: 0 5px;
     text-transform: uppercase;
     font-family: Georgia;
@@ -320,6 +318,11 @@ ul.breadcrumbs li {
 
 .portlet-body {
     padding-left: 5px;
+}
+
+.portlet .blog-tag-cloud,
+.portlet .blog-archive {
+    margin-top: 15px;
 }
 
 /* Navigation */
@@ -350,7 +353,7 @@ ul.breadcrumbs li {
 .navigation-portlet .level-2,
 .navigation-portlet .level-3,
 .navigation-portlet .level-4 {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 
