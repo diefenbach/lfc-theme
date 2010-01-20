@@ -34,7 +34,7 @@
                     <li class="search-results-item {% if forloop.last %}last{% endif %}">
                         <h3>
                             <a href="{{ result.get_absolute_url }}">
-                                {% for ancestor in result.get_reverse_ancestors %}
+                                {% for ancestor in result.get_ancestors_reverse %}
                                     {{ ancestor.title }} &gt;
                                 {% endfor %}
                                 {{ result.title }}
