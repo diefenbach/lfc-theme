@@ -14,47 +14,4 @@
         <field type="CharField" name="name">Right</field>
     </object>
 
-    <object pk="1" model="lfc.template">
-        <field type="CharField" name="name">Article</field>
-        <field type="CharField" name="file_name">article.html</field>
-        <field type="IntegerField" name="subpages_columns">0</field>
-        <field type="IntegerField" name="images_columns">0</field>
-    </object>
-    <object pk="2" model="lfc.template">
-        <field type="CharField" name="name">Blog</field>
-        <field type="CharField" name="file_name">blog.html</field>
-        <field type="IntegerField" name="subpages_columns">0</field>
-        <field type="IntegerField" name="images_columns">0</field>
-    </object>
-    <object pk="3" model="lfc.template">
-        <field type="CharField" name="name">Blog Entry</field>
-        <field type="CharField" name="file_name">blog_entry.html</field>
-        <field type="IntegerField" name="subpages_columns">0</field>
-        <field type="IntegerField" name="images_columns">0</field>
-    </object>
-    <object pk="4" model="lfc.template">
-        <field type="CharField" name="name">Contact</field>
-        <field type="CharField" name="file_name">contact.html</field>
-        <field type="IntegerField" name="subpages_columns">0</field>
-        <field type="IntegerField" name="images_columns">0</field>
-    </object>
-    <object pk="5" model="lfc.template">
-        <field type="CharField" name="name">Gallery</field>
-        <field type="CharField" name="file_name">gallery.html</field>
-        <field type="IntegerField" name="subpages_columns">0</field>
-        <field type="IntegerField" name="images_columns">3</field>
-    </object>
-    <object pk="6" model="lfc.template">
-        <field type="CharField" name="name">Plain</field>
-        <field type="CharField" name="file_name">plain.html</field>
-        <field type="IntegerField" name="subpages_columns">0</field>
-        <field type="IntegerField" name="images_columns">0</field>
-    </object>
-    <object pk="7" model="lfc.template">
-        <field type="CharField" name="name">Overview</field>
-        <field type="CharField" name="file_name">overview.html</field>
-        <field type="IntegerField" name="subpages_columns">0</field>
-        <field type="IntegerField" name="images_columns">0</field>
-    </object>
-
 </django-objects>
