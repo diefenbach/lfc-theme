@@ -21,12 +21,12 @@
             </h2>
             {% if sub_object.get_image %}
                 <img class="left"
-                     src="{{ sub_object.get_image.image.url_200x200 }}"
+                     src="{{ sub_object.get_image.image.url_100x100 }}"
                      alt="{{ sub_object.get_image.image.title }}"
                      title="{{ sub_object.get_image.image.title }}" />
             {% endif %}
             <div>
-                {{ sub_object.text|safe }}
+                {{ sub_object.description|safe }}
             </div>
         </div>
         <br clear="all" />

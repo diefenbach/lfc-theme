@@ -8,15 +8,15 @@
         <h1 class="first-heading">{{ lfc_context.title }}</h1>
     {% endif %}
     
-    <div class="blog-entry">
-        {% if lfc_context.get_image %}
-            <a href="{{ lfc_context.get_image.image.url_800x800 }}"
+    <div class="article">
+        {% if image %}
+            <a href="{{ image.image.url_800x800 }}"
                class="photo-image"
-               title="{{lfc_context.get_image.title }}">
+               title="{{ image.title }}">
                 <img class="left"
-                     src="{{ lfc_context.get_image.image.url_200x200 }}"
-                     alt="{{ lfc_context.get_image.image.title }}"
-                     title="{{ lfc_context.get_image.image.title }}" />
+                     src="{{ image.image.url_200x200 }}"
+                     alt="{{ image.image.title }}"
+                     title="{{ image.title }}" />
             </a>
         {% endif %}
         <div>

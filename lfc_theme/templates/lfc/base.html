@@ -90,11 +90,7 @@
         <div id="tabs">
             <div class="container">
                 <div class="span-16">
-                    {% if lfc_context %}
-                        {% tabs lfc_context %}
-                    {% else %}
-                        {% tabs %}
-                    {% endif %}
+                    {% tabs %}
                 </div>
                 <div class="span-8 last search-form">
                     <form action='{% url lfc_search language=LANGUAGE_CODE %}'>

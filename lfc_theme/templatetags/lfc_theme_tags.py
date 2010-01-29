@@ -1,3 +1,4 @@
+from django.core.cache import cache
 from django.template import Library, Node, TemplateSyntaxError
 from django.utils.translation import ugettext as _
 
@@ -12,6 +13,17 @@ class SlotsInformationNode(Node):
     """
     def render(self, context):
         page = context.get("lfc_context")
+
+        if page:
+            cache_key = "slots-information-%s-%s" % (page.content_type, page.id)
+            context["content_class"] = cache.get(cache_key)
+        else:
+            cache_key = "slots-information-portal"
+            context["content_class"] = cache.get(cache_key)
+
+        if context["content_class"]:
+            return ""
+
         if page:
             page = page.get_content_object()
 
@@ -27,6 +39,7 @@ class SlotsInformationNode(Node):
         else:
             content_class = "span-24 last"
 
+        cache.set(cache_key, content_class)
         context["content_class"] = content_class
         return ''
 
