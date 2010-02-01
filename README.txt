@@ -1,10 +1,25 @@
 What is it?
 ===========
 
-The default theme for `LFC <http://pypi.python.org/pypi/django-lfc/>`
+The default theme for `LFC <http://pypi.python.org/pypi/django-lfc/>`_
 
 Changes
 =======
+
+1.0 alpha 5 (2010-02-01)
+
+* Some refactoring according to LFC 1.0 alpha 5
+
+1.0 alpha 4 (2010-01-01)
+------------------------
+
+* Hurz!
+
+1.0 alpha 3 (2010-01-15)
+------------------------
+
+* Some refactoring according to LFC 1.0 alpha 4
+* Updated german translations
 
 1.0 alpha 2 (2010-01-15)
 ------------------------
