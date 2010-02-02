@@ -7,6 +7,7 @@ Changes
 =======
 
 1.0 alpha 5 (2010-02-01)
+------------------------
 
 * Some refactoring according to LFC 1.0 alpha 5
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-13 16:13+0100\n"
+"POT-Creation-Date: 2010-02-02 17:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,11 +23,11 @@ msgstr "Entschuldigung"
 msgid "The page you have requested can't be found!"
 msgstr "Die Seite, die Sie angefordert haben konnte nicht gefunden werden."
 
-#: templates/comments/comments.html:8
+#: templates/comments/comments.html:9
 msgid "Comments"
 msgstr "Kommentare"
 
-#: templates/comments/comments.html:31
+#: templates/comments/comments.html:32
 msgid "Leave a comment"
 msgstr "Kommentieren"
 
@@ -85,43 +85,35 @@ msgstr "Absenden"
 msgid "Thank you!"
 msgstr "Vielen Dank!"
 
-#: templates/lfc/base.html:41
+#: templates/lfc/base.html:45
 msgid "Logout"
 msgstr "Abmelden"
 
-#: templates/lfc/base.html:43 templates/lfc/base.html.py:45
+#: templates/lfc/base.html:47 templates/lfc/base.html.py:49
 msgid "Manage"
 msgstr "Verwalten"
 
-#: templates/lfc/base.html:62 templates/lfc/base.html.py:67
-msgid "German"
-msgstr "Deutsch"
-
-#: templates/lfc/base.html:64 templates/lfc/base.html.py:69
-msgid "English"
-msgstr "Englisch"
-
-#: templates/lfc/base.html:98 templates/lfc/search_results.html:23
+#: templates/lfc/base.html:102 templates/lfc/search_results.html:23
 msgid "Search"
 msgstr "Suche"
 
-#: templates/lfc/base.html:149
+#: templates/lfc/base.html:155
 msgid "Powered by"
 msgstr "Powered by"
 
-#: templates/lfc/base.html:151
+#: templates/lfc/base.html:157
 msgid "is a product of"
 msgstr "ist ein Produkt von"
 
-#: templates/lfc/base.html:152
+#: templates/lfc/base.html:158
 msgid "All rights reserved"
 msgstr "Alle Rechte vorbehalten"
 
-#: templates/lfc/base.html:154
+#: templates/lfc/base.html:160
 msgid "Distributed under the"
 msgstr "Verteilt unter der"
 
-#: templates/lfc/base.html:154
+#: templates/lfc/base.html:160
 msgid "BSD-License"
 msgstr "BSD-Lizenz"
 
@@ -180,10 +172,6 @@ msgstr "Themen"
 msgid "You are here"
 msgstr "Sie sind hier"
 
-#: templates/lfc/tags/files.html:3
-msgid "Files"
-msgstr "Dateien"
-
 #: templates/pagination/pagination.html:5
 #: templates/pagination/pagination.html:7
 msgid "Previous page"
@@ -194,7 +182,16 @@ msgstr "Vorherige Seite"
 msgid "Next page"
 msgstr "Nächste Seite"
 
-#: templatetags/lfc_theme_tags.py:39
+#: templatetags/lfc_theme_tags.py:52
 #, python-format
 msgid "%s tag needs no argument"
 msgstr ""
+
+msgid "German"
+msgstr "Deutsch"
+
+msgid "English"
+msgstr "Englisch"
+
+msgid "Files"
+msgstr "Dateien"
