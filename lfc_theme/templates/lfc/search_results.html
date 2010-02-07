@@ -42,7 +42,7 @@
                         </h3>
                         {% if result.short_text %}
                             <p>
-                                {{ result.short_text }} <a href="{{ result.get_absolute_url }}">{% trans 'Read on' %}</a>.
+                                {{ result.description }} <a href="{{ result.get_absolute_url }}">{% trans 'Read on' %}</a>.
                             </p>
                         {% endif %}
                     </li>
