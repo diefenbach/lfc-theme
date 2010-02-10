@@ -14,15 +14,6 @@
         {{ lfc_context.text|safe }}
     {% endif %}
 
-    <form action='{% url lfc_search "en" %}'>
-        <input type="text"
-               name="q"
-               value = "{{ request.REQUEST.q }}" />
-
-        <input type="submit"
-              value="{% trans 'Search' %}" />
-    </form>
-
     {% if results %}
         <div class="search-results">
             <p class="search-results-description">

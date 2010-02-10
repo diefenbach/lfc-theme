@@ -93,15 +93,26 @@
                     {% tabs %}
                 </div>
                 <div class="span-8 last search-form">
-                    <form action='{% url lfc_search language=LANGUAGE_CODE %}'>
-                        <input type="text"
-                               class="search"
-                               name="q" />
+                    {% if IS_DEFAULT_LANGUAGE %}
+                        <form action='{% url lfc_search %}'>
+                            <input type="text"
+                                   class="search"
+                                   name="q" />
 
-                        <input type="submit"
-                               value="{% trans 'Search' %}" />
+                            <input type="submit"
+                                   value="{% trans 'Search' %}" />
 
-                    </form>
+                        </form>                        
+                    {% else %}
+                        <form action='{% url lfc_search language=LANGUAGE_CODE %}'>
+                            <input type="text"
+                                   class="search"
+                                   name="q" />
+
+                            <input type="submit"
+                                   value="{% trans 'Search' %}" />
+                        </form>                        
+                    {% endif %}
                 </div>
             </div>
         </div>
