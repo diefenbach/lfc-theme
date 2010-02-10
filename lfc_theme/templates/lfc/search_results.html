@@ -3,9 +3,7 @@
 {% load lfc_tags %}
 {% load pagination_tags %}
 
-{% block title %}
-    {% trans 'Search results' %}
-{% endblock %}
+{% block title %}{{ block.super }}{% trans 'Search results' %}{% endblock %}
 
 {% block content %}
     <h1>{{ lfc_context.title }}</h1>
