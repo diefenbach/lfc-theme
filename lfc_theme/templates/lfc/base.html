@@ -1,7 +1,8 @@
 {% load i18n %}
 {% load lfc_tags %}
-{% load portlets_tags %}
 {% load lfc_theme_tags %}
+{% load portlets_tags %}
+{% load workflows_tags %}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -34,8 +35,13 @@
 
             <div id="management">
                 <div class="container">
-                    <div class="span-12">
+                    <div class="span-6">
                         {% templates %}
+                    </div>
+                    <div class="span-6">
+                        {% if lfc_context %}
+                            {% transitions lfc_context %}
+                        {% endif %}                        
                     </div>
                     <div id="login" class="span-12 last">
                         <span class="site-actions">
