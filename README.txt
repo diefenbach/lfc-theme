@@ -6,6 +6,11 @@ The default theme for `LFC <http://pypi.python.org/pypi/django-lfc/>`_
 Changes
 =======
 
+1.0 alpha 7 (2010-02-14)
+------------------------
+
+* Some changes accordign to LFC 1.0 alpha 7
+
 1.0 alpha 6 (2010-02-14)
 ------------------------
 
