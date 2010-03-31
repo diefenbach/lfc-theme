@@ -39,13 +39,15 @@
                         {% templates %}
                     </div>
                     <div class="span-6">
-                        {% if lfc_context %}                            
+                        {% if lfc_context and lfc_context.get_workflow %}
                             <form action="{% url lfc_do_transition lfc_context.id %}"
                                   method="POST">
                                 {% transitions lfc_context %}
                                 <input type="submit" value="{% trans 'Go' %}" />
                             </form>
-                        {% endif %}                        
+                        {% else %}
+                            &nbsp;
+                        {% endif %}
                     </div>
                     <div id="login" class="span-12 last">
                         <span class="site-actions">
@@ -114,7 +116,7 @@
                             <input type="submit"
                                    value="{% trans 'Search' %}" />
 
-                        </form>                        
+                        </form>
                     {% else %}
                         <form action='{% url lfc_search language=LANGUAGE_CODE %}'>
                             <input type="text"
@@ -123,7 +125,7 @@
 
                             <input type="submit"
                                    value="{% trans 'Search' %}" />
-                        </form>                        
+                        </form>
                     {% endif %}
                 </div>
             </div>
@@ -146,11 +148,11 @@
                     <div class="{{ content_class }}">
                         <div class="middle-slot">
                             {% breadcrumbs %}
-                            {% block content %}                                
+                            {% block content %}
                             {% endblock %}
                             {% block comments %}
                                 {% include "comments/comments.html" %}
-                            {% endblock %}                            
+                            {% endblock %}
                         </div>
                     </div>
 
