@@ -97,8 +97,14 @@
                 </div>
             {% else %}
                 <div class="container logo">
-                    <div class="span-24">
-                        <h1 class="logo"><a href="{{ portal.get_absolute_url }}">LFC</a></h1>
+                    <div class="span-18">
+                        <h1 class="logo"><a href="/{{ LINK_LANGUAGE }}">LFC</a></h1>
+                    </div>
+                    <div class="span-6 last flags">
+                        &nbsp;
+                        {% if not user.is_authenticated %}
+                            <a href="{% url lfc_login %}">{% trans "Login" %}</a>
+                        {% endif %}
                     </div>
                 </div>
             {% endif %}
