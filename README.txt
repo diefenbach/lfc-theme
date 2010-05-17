@@ -6,6 +6,11 @@ The default theme for `LFC <http://pypi.python.org/pypi/django-lfc/>`_
 Changes
 =======
 
+1.0 beta 1 (2010-05-17)
+------------------------
+
+* Added: display login for single language sites
+
 1.0 alpha 8 (2010-04-16)
 ------------------------
 
