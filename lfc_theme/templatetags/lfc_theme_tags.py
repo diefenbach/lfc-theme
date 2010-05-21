@@ -12,23 +12,25 @@ class SlotsInformationNode(Node):
     """
     """
     def render(self, context):
-        page = context.get("lfc_context")
+        obj = context.get("lfc_context")
 
-        if page:
-            cache_key = "slots-information-%s-%s" % (page.content_type, page.id)
-            context["content_class"] = cache.get(cache_key)
+        if obj:
+            cache_key = "slots-information-%s-%s" % (obj.content_type, obj.id)
         else:
             cache_key = "slots-information-portal"
-            context["content_class"] = cache.get(cache_key)
 
-        if context["content_class"]:
-            return ""
+        info = cache.get(cache_key)
+        if info:
+            context["content_class"] = info["content_class"]
+            context["SlotLeft"] = info["SlotLeft"]
+            context["SlotRight"] = info["SlotRight"]
+            return ''
 
-        if page:
-            page = page.get_content_object()
+        if obj:
+            obj = obj.get_content_object()
 
         for slot in Slot.objects.all():
-            context["Slot%s" % slot.name] = portlets.utils.has_portlets(slot, page)
+            context["Slot%s" % slot.name] = portlets.utils.has_portlets(slot, obj)
 
         if context["SlotLeft"] and context["SlotRight"]:
             content_class = "span-13 append-1"
@@ -39,7 +41,12 @@ class SlotsInformationNode(Node):
         else:
             content_class = "span-24 last"
 
-        cache.set(cache_key, content_class)
+        cache.set(cache_key, {
+            "content_class" : content_class,
+            "SlotRight" : context["SlotLeft"],
+            "SlotLeft" : context["SlotLeft"],
+        })
+
         context["content_class"] = content_class
         return ''
 
