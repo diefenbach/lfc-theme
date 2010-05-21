@@ -13,11 +13,12 @@ class SlotsInformationNode(Node):
     """
     def render(self, context):
         obj = context.get("lfc_context")
+        request = context.get("request")
 
         if obj:
-            cache_key = "slots-information-%s-%s" % (obj.content_type, obj.id)
+            cache_key = "slots-information-%s-%s-%s" % (obj.content_type, obj.id, request.user.id)
         else:
-            cache_key = "slots-information-portal"
+            cache_key = "slots-information-portal-%s" % request.user.id
 
         info = cache.get(cache_key)
         if info:
@@ -43,8 +44,8 @@ class SlotsInformationNode(Node):
 
         cache.set(cache_key, {
             "content_class" : content_class,
-            "SlotRight" : context["SlotLeft"],
             "SlotLeft" : context["SlotLeft"],
+            "SlotRight" : context["SlotRight"],
         })
 
         context["content_class"] = content_class
