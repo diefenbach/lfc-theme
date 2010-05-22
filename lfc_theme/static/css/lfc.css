@@ -367,6 +367,18 @@ ul.breadcrumbs li {
     display: inline;
 }
 
+#live-search-results {
+    padding: 10px;
+    position: absolute; right: 61px;
+    border: 1px solid #aaa;
+    width: 300px;
+    background: #eee;
+    display: none;
+    z-index: 100px;
+    -webkit-box-shadow: 4px 4px 9px #aaa;
+    -moz-box-shadow: 4px 4px 9px #aaa;
+}
+
 div.search-results {
     margin-top: 20px;
 }
