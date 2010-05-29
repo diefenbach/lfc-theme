@@ -1,17 +1,17 @@
 {% load i18n %}
 {% if results %}
     {% for result in results %}
-        <div>
+        <div class="item">
             <a href="{{ result.get_absolute_url }}">{{ result.title }}</a>
         </div>
-
-        <div align="right">
-            {% if see_all %}
-                <a href="{% url lfc_search  %}?q={{ query }}">All results ({{ quantity }})</a>
-            {% endif %}
-        </div>
-
     {% endfor %}
+
+    <div class="item" align="right">
+        {% if see_all %}
+            <a href="{% url lfc_search  %}?q={{ query }}">All results ({{ quantity }})</a>
+        {% endif %}
+    </div>
+    
 {% else %}
     <div>
         {% trans "No results found" %}

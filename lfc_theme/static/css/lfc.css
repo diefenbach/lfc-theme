@@ -383,6 +383,10 @@ div.search-results {
     margin-top: 20px;
 }
 
+#live-search-results .selected {
+    background-color: #ccc;
+}
+
 .search-results-items {
     margin-top: 20px;
 }

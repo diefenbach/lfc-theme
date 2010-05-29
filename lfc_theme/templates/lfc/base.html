@@ -117,7 +117,9 @@
                 </div>
                 <div class="span-8 last search-form">
                     {% if IS_DEFAULT_LANGUAGE %}
-                        <form action='{% url lfc_search %}'>
+                        <form id="search-form"
+                              data='{% url lfc_live_search language=LANGUAGE_CODE %}'
+                              action='{% url lfc_search %}'>
                             <input type="text"
                                    class="search"
                                    name="q" />
@@ -127,7 +129,9 @@
 
                         </form>
                     {% else %}
-                        <form action='{% url lfc_search language=LANGUAGE_CODE %}'>
+                        <form id="search-form"
+                              data='{% url lfc_live_search language=LANGUAGE_CODE %}'
+                              action='{% url lfc_search language=LANGUAGE_CODE %}'>
                             <input type="text"
                                    class="search"
                                    name="q" />
