@@ -16,9 +16,11 @@ class SlotsInformationNode(Node):
         request = context.get("request")
 
         if obj:
-            cache_key = "slots-information-%s-%s-%s" % (obj.content_type, obj.id, request.user.id)
+            cache_key = "%s-slots-information-%s-%s-%s" % \
+                (settings.CACHE_MIDDLEWARE_KEY_PREFIX, obj.content_type, obj.id, request.user.id)
         else:
-            cache_key = "slots-information-portal-%s" % request.user.id
+            cache_key = "%s-slots-information-portal-%s" % \
+                (settings.CACHE_MIDDLEWARE_KEY_PREFIX, request.user.id)
 
         info = cache.get(cache_key)
         if info:
