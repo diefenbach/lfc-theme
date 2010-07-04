@@ -1,3 +1,5 @@
+# django imports
+from django.conf import settings
 from django.core.cache import cache
 from django.template import Library, Node, TemplateSyntaxError
 from django.utils.translation import ugettext as _
