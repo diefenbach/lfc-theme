@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-02 17:40+0100\n"
+"POT-Creation-Date: 2010-07-11 11:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -73,47 +74,67 @@ msgstr "Kommentar absenden"
 msgid "or make changes"
 msgstr "oder Änderungen vornehmen"
 
-#: templates/contact_form/contact_form.html:9
+#: templates/contact_form/contact_form.html:6
+#: templates/contact_form/contact_form.html:10
+#: templates/lfc/templates/contact.html:6
+#: templates/lfc/templates/contact.html:10
 msgid "Contact"
 msgstr "Kontakt"
 
-#: templates/contact_form/contact_form.html:20
+#: templates/contact_form/contact_form.html:21
+#: templates/lfc/templates/contact.html:21
 msgid "Send"
 msgstr "Absenden"
 
-#: templates/contact_form/contact_form_sent.html:9
+#: templates/contact_form/contact_form_sent.html:6
+msgid "Thank you"
+msgstr "Vielen Dank!"
+
+#: templates/contact_form/contact_form_sent.html:10
 msgid "Thank you!"
 msgstr "Vielen Dank!"
 
-#: templates/lfc/base.html:45
+#: templates/contact_form/contact_form_sent.html:13
+msgid "Your message has been submitted. We will get back to you soon."
+msgstr "Ihre Nachricht wurde übermittelt. Wir werden uns in kürze bei Ihnen melden."
+
+#: templates/lfc/base.html:46
+msgid "Go"
+msgstr "Los"
+
+#: templates/lfc/base.html:59
 msgid "Logout"
 msgstr "Abmelden"
 
-#: templates/lfc/base.html:47 templates/lfc/base.html.py:49
+#: templates/lfc/base.html:61 templates/lfc/base.html.py:63
 msgid "Manage"
 msgstr "Verwalten"
 
-#: templates/lfc/base.html:102 templates/lfc/search_results.html:23
+#: templates/lfc/base.html:79 templates/lfc/base.html.py:106
+msgid "Login"
+msgstr "Login"
+
+#: templates/lfc/base.html:126 templates/lfc/base.html.py:136
 msgid "Search"
 msgstr "Suche"
 
-#: templates/lfc/base.html:155
+#: templates/lfc/base.html:189
 msgid "Powered by"
 msgstr "Powered by"
 
-#: templates/lfc/base.html:157
+#: templates/lfc/base.html:191
 msgid "is a product of"
 msgstr "ist ein Produkt von"
 
-#: templates/lfc/base.html:158
+#: templates/lfc/base.html:192
 msgid "All rights reserved"
 msgstr "Alle Rechte vorbehalten"
 
-#: templates/lfc/base.html:160
+#: templates/lfc/base.html:194
 msgid "Distributed under the"
 msgstr "Verteilt unter der"
 
-#: templates/lfc/base.html:160
+#: templates/lfc/base.html:194
 msgid "BSD-License"
 msgstr "BSD-Lizenz"
 
@@ -137,26 +158,26 @@ msgstr "Bitte geben Sie Ihren Benutzername und Ihr Passwort ein."
 msgid "Log in"
 msgstr "Anmelden"
 
-#: templates/lfc/search_results.html:7
+#: templates/lfc/search_results.html:6
 msgid "Search results"
 msgstr "Suchresultate"
 
-#: templates/lfc/search_results.html:29
+#: templates/lfc/search_results.html:18
 msgid "You searched for"
 msgstr "Sie suchten nach"
 
-#: templates/lfc/search_results.html:30
+#: templates/lfc/search_results.html:19
 #, python-format
 msgid "There is one page found."
 msgid_plural "There have been %(counter)s pages found."
 msgstr[0] "Es wurde eine Seite gefunden."
 msgstr[1] "Es wurden %(counter)s Seiten gefunden"
 
-#: templates/lfc/search_results.html:45
+#: templates/lfc/search_results.html:34
 msgid "Read on"
 msgstr "Weiterlesen"
 
-#: templates/lfc/search_results.html:54
+#: templates/lfc/search_results.html:43
 msgid "There are no results."
 msgstr "Es wurde nichts gefunden."
 
@@ -182,7 +203,7 @@ msgstr "Vorherige Seite"
 msgid "Next page"
 msgstr "Nächste Seite"
 
-#: templatetags/lfc_theme_tags.py:52
+#: templatetags/lfc_theme_tags.py:64
 #, python-format
 msgid "%s tag needs no argument"
 msgstr ""
