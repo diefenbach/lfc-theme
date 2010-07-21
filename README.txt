@@ -6,6 +6,12 @@ The default theme for `LFC <http://pypi.python.org/pypi/django-lfc/>`_
 Changes
 =======
 
+1.0 beta 3 (2010-07-07)
+------------------------
+
+Change: cache keys are using CACHE_MIDDLEWARE_PREFIX now
+Bugfix  lfc_theme_tags: added missing import of settings
+
 1.0 beta 2 (2010-05-21)
 ------------------------
 
