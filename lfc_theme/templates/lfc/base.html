@@ -3,6 +3,7 @@
 {% load lfc_theme_tags %}
 {% load portlets_tags %}
 {% load workflows_tags %}
+{% load resources_tags %}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -17,17 +18,9 @@
         {% if lfc_context.get_meta_keywords %}<meta name="keywords" content="{{lfc_context.get_meta_keywords}}" />{% endif %}
         {% if lfc_context.get_meta_description %}<meta name="description" content="{{lfc_context.get_meta_description}}" />{% endif %}
 
-        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc/lightbox/css/jquery.lightbox-0.5.css">
-        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc/yui/reset-fonts.css">
-        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc/blueprint/src/grid.css">
-        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}lfc_theme/css/lfc.css">
         {% block css %}{% endblock %}
-
-        <script type="text/javascript" src="{{ MEDIA_URL }}lfc/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="{{ MEDIA_URL }}lfc/jquery/jquery.tools.min.js"></script>
-        <script type="text/javascript" src="{{ MEDIA_URL }}lfc/lightbox/js/jquery.lightbox-0.5.js"></script>
-        <script type="text/javascript" src="{{ MEDIA_URL }}lfc_theme/js/lfctheme.js"></script>
-
+        {% css "lfc" %}
+        
         {% block javascript %}{% endblock %}
     </head>
     <body class="{{ lfc_context.slug }} {% block section %}{% endblock %}">
@@ -201,4 +194,5 @@
             </div>
         </div>
     </body>
+    {% javascript "lfc" %}
 </html>
