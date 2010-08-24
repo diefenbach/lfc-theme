@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-08-24 06:11-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/404.html:7
+msgid "Sorry"
+msgstr ""
+
+#: templates/404.html:8
+msgid "The page you have requested can't be found!"
+msgstr ""
+
+#: templates/comments/comments.html:9
+msgid "Comments"
+msgstr ""
+
+#: templates/comments/comments.html:32
+msgid "Leave a comment"
+msgstr ""
+
+#: templates/comments/form.html:15 templates/comments/preview.html:25
+msgid "(will not be published)"
+msgstr ""
+
+#: templates/comments/form.html:37 templates/comments/preview.html:44
+msgid "Post"
+msgstr ""
+
+#: templates/comments/posted.html:4
+msgid "Thanks for commenting"
+msgstr ""
+
+#: templates/comments/posted.html:7
+msgid "Thank you for your comment"
+msgstr ""
+
+#: templates/comments/posted.html:13
+msgid "Back to page"
+msgstr ""
+
+#: templates/comments/preview.html:5 templates/comments/preview.html.py:12
+msgid "Preview your comment"
+msgstr ""
+
+#: templates/comments/preview.html:10
+msgid "Please correct the error below"
+msgid_plural "Please correct the errors below"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/comments/preview.html:15
+msgid "and"
+msgstr ""
+
+#: templates/comments/preview.html:15
+msgid "Post your comment"
+msgstr ""
+
+#: templates/comments/preview.html:15
+msgid "or make changes"
+msgstr ""
+
+#: templates/contact_form/contact_form.html:6
+#: templates/contact_form/contact_form.html:10
+msgid "Contact"
+msgstr ""
+
+#: templates/contact_form/contact_form.html:21
+msgid "Send"
+msgstr ""
+
+#: templates/contact_form/contact_form_sent.html:6
+msgid "Thank you"
+msgstr ""
+
+#: templates/contact_form/contact_form_sent.html:10
+msgid "Thank you!"
+msgstr ""
+
+#: templates/contact_form/contact_form_sent.html:13
+msgid "Your message has been submitted. We will get back to you soon."
+msgstr ""
+
+#: templates/lfc/base.html:46
+msgid "Go"
+msgstr ""
+
+#: templates/lfc/base.html:59
+msgid "Logout"
+msgstr ""
+
+#: templates/lfc/base.html:61 templates/lfc/base.html.py:63
+msgid "Manage"
+msgstr ""
+
+#: templates/lfc/base.html:79 templates/lfc/base.html.py:106
+msgid "Login"
+msgstr ""
+
+#: templates/lfc/base.html:126 templates/lfc/base.html.py:136
+msgid "Search"
+msgstr ""
+
+#: templates/lfc/base.html:189
+msgid "Powered by"
+msgstr ""
+
+#: templates/lfc/base.html:191
+msgid "is a product of"
+msgstr ""
+
+#: templates/lfc/base.html:192
+msgid "All rights reserved"
+msgstr ""
+
+#: templates/lfc/base.html:194
+msgid "Distributed under the"
+msgstr ""
+
+#: templates/lfc/base.html:194
+msgid "BSD-License"
+msgstr ""
+
+#: templates/lfc/logged_out.html:5
+msgid "You are now logged out."
+msgstr ""
+
+#: templates/lfc/logged_out.html:6
+msgid "Log in again"
+msgstr ""
+
+#: templates/lfc/login.html:8
+msgid "LFC Login"
+msgstr ""
+
+#: templates/lfc/login.html:10
+msgid "Please enter your username and password."
+msgstr ""
+
+#: templates/lfc/login.html:19
+msgid "Log in"
+msgstr ""
+
+#: templates/lfc/search_results.html:6
+msgid "Search results"
+msgstr ""
+
+#: templates/lfc/search_results.html:18
+msgid "You searched for"
+msgstr ""
+
+#: templates/lfc/search_results.html:19
+#, python-format
+msgid "There is one page found."
+msgid_plural "There have been %(counter)s pages found."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/lfc/search_results.html:34
+msgid "Read on"
+msgstr ""
+
+#: templates/lfc/search_results.html:43
+msgid "There are no results."
+msgstr ""
+
+#: templates/lfc/portlets/related_pages.html:7
+msgid "Related pages"
+msgstr ""
+
+#: templates/lfc/portlets/tag_cloud_portlet.html:8
+msgid "Topics"
+msgstr ""
+
+#: templates/lfc/tags/breadcrumbs.html:4
+msgid "You are here"
+msgstr ""
+
+#: templates/pagination/pagination.html:5
+#: templates/pagination/pagination.html:7
+msgid "Previous page"
+msgstr ""
+
+#: templates/pagination/pagination.html:21
+#: templates/pagination/pagination.html:23
+msgid "Next page"
+msgstr ""
+
+#: templatetags/lfc_theme_tags.py:64
+#, python-format
+msgid "%s tag needs no argument"
+msgstr ""
