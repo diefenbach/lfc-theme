@@ -1,0 +1,9 @@
+<div id="{{ id }}">Loading RSS-Feed ...</div>
+
+<script>
+    $(function() {
+        $.get("{% url lfc_rss_get_entries %}?url={{ url }}", function(result) {
+            $("#{{ id }}").html(result);
+        })
+    });
+</script>
