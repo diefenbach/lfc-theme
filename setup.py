@@ -11,7 +11,7 @@ setup(name='lfc-theme',
       description='The default theme for LFC',
       long_description=README,
       classifiers=[
-          'Development Status :: 4 - Beta',
+          'Development Status :: 5 - Production/Stable',
           'Environment :: Web Environment',
           'Framework :: Django',
           'License :: OSI Approved :: BSD License',
