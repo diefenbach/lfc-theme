@@ -20,11 +20,16 @@
 
         {% block css %}{% endblock %}
         {% css "lfc" %}
-        
+
+        {% javascript "lfc" %}
         {% block javascript %}{% endblock %}
+        
+        <link rel="shortcut icon" href="{{ MEDIA_URL }}lfc/img/favicon.ico" type="image/ico" />
+        
     </head>
     <body class="{{ lfc_context.slug }} {% block section %}{% endblock %}">
-        {% if user.is_authenticated %}
+            
+            {% if user.is_authenticated %}
 
             <div id="management">
                 <div class="container">
@@ -51,9 +56,9 @@
                             {% endif %}
                             | <a class="site-action" href="{% url lfc_logout %}">{% trans "Logout" %}</a>
                             {% if lfc_context %}
-                                | <a class="site-action" href="{% url lfc_manage_object lfc_context.id %}">{% trans "Manage" %}</a>
+                                | <a class="site-action" href="{% url lfc_manage_portal %}#type=object&amp;id={{lfc_context.id}}">{% trans "Manage" %}</a>
                             {% else %}
-                                | <a class="site-action" href="{% url lfc_manage_portal %}">{% trans "Manage" %}</a>
+                                | <a class="site-action" href="{% url lfc_manage_portal %}#type=portal&amp;id=1">{% trans "Manage" %}</a>
                             {% endif %}
                         </span>
                     </div>
@@ -194,5 +199,4 @@
             </div>
         </div>
     </body>
-    {% javascript "lfc" %}
 </html>
