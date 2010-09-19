@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load lfc_tags %}
+
+<div id="tabs">
+    <div class="container">
+        <div class="span-16">
+            {% tabs %}
+        </div>
+        <div class="span-8 last search-form">
+            {% if IS_DEFAULT_LANGUAGE %}
+                <form id="search-form"
+                      data='{% url lfc_live_search language=LANGUAGE_CODE %}'
+                      action='{% url lfc_search %}'>
+                    <input type="text"
+                           class="search"
+                           name="q" />
+
+                    <input type="submit"
+                           value="{% trans 'Search' %}" />
+
+                </form>
+            {% else %}
+                <form id="search-form"
+                      data='{% url lfc_live_search language=LANGUAGE_CODE %}'
+                      action='{% url lfc_search language=LANGUAGE_CODE %}'>
+                    <input type="text"
+                           class="search"
+                           name="q" />
+
+                    <input type="submit"
+                           value="{% trans 'Search' %}" />
+                </form>
+            {% endif %}
+            <div align="left" id="live-search-results"></div>
+        </div>
+    </div>
+</div>
