@@ -233,6 +233,10 @@ ul.breadcrumbs li {
 }
 
 /* Comments */
+.comment {
+    padding-bottom: 10px;
+}
+
 #comments {
     background-color: #e1e2d4;
     padding: 20px 0;
@@ -417,4 +421,23 @@ div.scrollable div.items {
 div.scrollable div.items div {
     width: 400px;
     height:100px;
+}
+
+table.gallery {
+    width: 100%;
+}
+
+table.gallery td {
+    vertical-align: top;
+    width: 25%;
+    padding-right: 15px;
+}
+
+.gallery .image {
+    height: 205px;
+}
+
+.gallery .caption {
+    font-size: 90%;
+    padding-bottom: 8px;
 }

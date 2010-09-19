@@ -7,25 +7,31 @@
     {% endif %}
     <div>{{ lfc_context.text|safe }}</div>
 
-    <table width="100%" cellpadding="0" cellspacing="0">
+    <table class="gallery">
         {% for row in images %}
             <tr>
-                {% for photo in row %}
-                    <td width="33%">
-                        <div class="photo">
-                            <h2 class="photo-name">
-                                {{ photo.title }}
-                            </h2>
-                            <div class="photo-description">
-                                {{ photo.caption }}
-                            </div>
-                            <a href="{{ photo.image.url_600x600 }}"
-                               class="photo-image"
-                               title="{{ photo.title }}">
-                                <img src="{{ photo.image.url_200x200 }}"
-                                     alt="{{ photo.name }}"
-                                     title="{{ photo.title }}" />
+                {% for image in row %}
+                    <td>
+                        <h2 class="title">
+                            {{ image.title }}
+                        </h2>
+                        <div class="caption">
+                            {{ image.caption }}
+                        </div>
+                        <div class="image">
+                            <a href="{{ image.image.url_600x600 }}"
+                               class="lightbox"
+                               title="{{ image.title }}">
+                                <img src="{{ image.image.url_200x200 }}"
+                                     alt="{{ image.name }}"
+                                     title="{{ image.title }}" />
                             </a>
+                        </div>
+                        <div class="short-description">
+                            {{ image.short_description }}
+                        </div>
+                        <div class="description">
+                            {{ image.description|safe }}
                         </div>
                     </td>
                 {% endfor %}

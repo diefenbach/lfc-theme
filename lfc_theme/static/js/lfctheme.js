@@ -20,7 +20,7 @@ $.fn.delay = function(options) {
 
 $(function() {
 
-    $("a.photo-image").lightBox();
+    $("a.lightbox").lightBox();
 
     $("#search-form").keypress(function(e) {
         if (e.keyCode == 13) {
