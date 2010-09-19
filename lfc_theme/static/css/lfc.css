@@ -282,6 +282,10 @@ ul.breadcrumbs li {
 }
 
 /* Portlets */
+.portlet {
+    margin-bottom: 20px;
+}
+
 .portlet a {
     text-decoration: none;
     color: #555;
@@ -330,10 +334,8 @@ ul.breadcrumbs li {
 }
 
 
-.navigation-portlet .level-2,
-.navigation-portlet .level-3,
-.navigation-portlet .level-4 {
-    padding-left: 10px;
+.navigation-portlet li li {
+    padding-left: 20px;
 }
 
 
