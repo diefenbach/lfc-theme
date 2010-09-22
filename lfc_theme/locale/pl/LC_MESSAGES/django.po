@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: LFC Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-02 17:40+0100\n"
+"PO-Revision-Date: 2010-09-19 12:56+0100\n"
+"Last-Translator: Pigletto <pigletto@gmail.com>\n"
+"Language-Team: Natcam <pigletto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: POLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: templates/404.html:7
+msgid "Sorry"
+msgstr "Przepraszamy"
+
+#: templates/404.html:8
+msgid "The page you have requested can't be found!"
+msgstr "Strona którą chciałeś przeglądać nie została znaleziona!"
+
+#: templates/comments/comments.html:9
+msgid "Comments"
+msgstr "Komentarze"
+
+#: templates/comments/comments.html:32
+msgid "Leave a comment"
+msgstr "Dodaj komentarz"
+
+#: templates/comments/form.html:15
+#: templates/comments/preview.html:25
+msgid "(will not be published)"
+msgstr "(nie będzie publikowany)"
+
+#: templates/comments/form.html:37
+#: templates/comments/preview.html:44
+msgid "Post"
+msgstr "Publikuj"
+
+#: templates/comments/posted.html:4
+msgid "Thanks for commenting"
+msgstr "Dziękujemy za skomentowanie"
+
+#: templates/comments/posted.html:7
+msgid "Thank you for your comment"
+msgstr "Dziękujemy za Twój komentarz"
+
+#: templates/comments/posted.html:13
+msgid "Back to page"
+msgstr "Wróć do strony"
+
+#: templates/comments/preview.html:5
+#: templates/comments/preview.html.py:12
+msgid "Preview your comment"
+msgstr "Podgląd Twojego komentarza"
+
+#: templates/comments/preview.html:10
+msgid "Please correct the error below"
+msgid_plural "Please correct the errors below"
+msgstr[0] "Popraw poniższy błąd"
+msgstr[1] "Popraw poniższe błędy"
+msgstr[2] "Popraw poniższe błędy"
+
+#: templates/comments/preview.html:15
+msgid "and"
+msgstr "i"
+
+#: templates/comments/preview.html:15
+msgid "Post your comment"
+msgstr "Opublikuj swój komentarz"
+
+#: templates/comments/preview.html:15
+msgid "or make changes"
+msgstr "lub dokonaj zmian"
+
+#: templates/contact_form/contact_form.html:9
+msgid "Contact"
+msgstr "Kontakt"
+
+#: templates/contact_form/contact_form.html:20
+msgid "Send"
+msgstr "Wyślij"
+
+#: templates/contact_form/contact_form_sent.html:9
+msgid "Thank you!"
+msgstr "Dziękujemy!"
+
+#: templates/lfc/base.html:45
+msgid "Logout"
+msgstr "Wyloguj się"
+
+#: templates/lfc/base.html:47
+#: templates/lfc/base.html.py:49
+msgid "Manage"
+msgstr "Zarządzaj"
+
+#: templates/lfc/base.html:102
+#: templates/lfc/search_results.html:23
+msgid "Search"
+msgstr "Szukaj"
+
+#: templates/lfc/base.html:155
+msgid "Powered by"
+msgstr "Powered by"
+
+#: templates/lfc/base.html:157
+msgid "is a product of"
+msgstr "jest produktem"
+
+#: templates/lfc/base.html:158
+msgid "All rights reserved"
+msgstr "Wszystkie prawa zastrzeżone"
+
+#: templates/lfc/base.html:160
+msgid "Distributed under the"
+msgstr "Dystrybuowany na licencji"
+
+#: templates/lfc/base.html:160
+msgid "BSD-License"
+msgstr "BSD"
+
+#: templates/lfc/logged_out.html:5
+msgid "You are now logged out."
+msgstr "Jesteś teraz wylogowany."
+
+#: templates/lfc/logged_out.html:6
+msgid "Log in again"
+msgstr "Zaloguj się ponownie"
+
+#: templates/lfc/login.html:8
+msgid "LFC Login"
+msgstr "LFC Logowanie"
+
+#: templates/lfc/login.html:10
+msgid "Please enter your username and password."
+msgstr "Proszę wprowadzić swoją nazwę użytkownika i hasło."
+
+#: templates/lfc/login.html:19
+msgid "Log in"
+msgstr "Zaloguj się"
+
+#: templates/lfc/search_results.html:7
+msgid "Search results"
+msgstr "Rezultaty wyszukiwania"
+
+#: templates/lfc/search_results.html:29
+msgid "You searched for"
+msgstr "Szukałeś"
+
+#: templates/lfc/search_results.html:30
+#, python-format
+msgid "There is one page found."
+msgid_plural "There have been %(counter)s pages found."
+msgstr[0] "Znaleziono jedną stronę."
+msgstr[1] "Znaleziono %(counter)s strony."
+msgstr[2] "Znaleziono %(counter)s stron."
+
+#: templates/lfc/search_results.html:45
+msgid "Read on"
+msgstr "Czytaj dalej"
+
+#: templates/lfc/search_results.html:54
+msgid "There are no results."
+msgstr "Nie ma żadnych wyników."
+
+#: templates/lfc/portlets/related_pages.html:7
+msgid "Related pages"
+msgstr "Powiązane strony"
+
+#: templates/lfc/portlets/tag_cloud_portlet.html:8
+msgid "Topics"
+msgstr "Wątki"
+
+#: templates/lfc/tags/breadcrumbs.html:4
+msgid "You are here"
+msgstr "Jesteś tutaj"
+
+#: templates/pagination/pagination.html:5
+#: templates/pagination/pagination.html:7
+msgid "Previous page"
+msgstr "Poprzednia strona"
+
+#: templates/pagination/pagination.html:21
+#: templates/pagination/pagination.html:23
+msgid "Next page"
+msgstr "Następna strona"
+
+#: templatetags/lfc_theme_tags.py:52
+#, python-format
+msgid "%s tag needs no argument"
+msgstr ""
+
+msgid "German"
+msgstr "Niemiecki"
+
+msgid "English"
+msgstr "Angielski"
+
+msgid "Files"
+msgstr "Pliki"
+
