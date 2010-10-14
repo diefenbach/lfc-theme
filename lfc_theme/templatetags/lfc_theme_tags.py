@@ -35,7 +35,7 @@ class SlotsInformationNode(Node):
             obj = obj.get_content_object()
 
         for slot in Slot.objects.all():
-            context["Slot%s" % slot.name] = portlets.utils.has_portlets(slot, obj)
+            context["Slot%s" % slot.name] = portlets.utils.has_portlets(obj, slot)
 
         if context["SlotLeft"] and context["SlotRight"]:
             content_class = "span-13 append-1"
