@@ -1,6 +1,5 @@
 {% load i18n %}
 {% load lfc_tags %}
-{% load workflows_tags %}
 
 {% if user.is_authenticated %}    
     <div id="management">
@@ -8,18 +7,7 @@
             <div class="span-6">
                 {% templates %}
             </div>
-            <div class="span-6">
-                {% if lfc_context and lfc_context.get_workflow %}
-                    <form action="{% url lfc_do_transition lfc_context.id %}"
-                          method="POST">
-                        {% transitions lfc_context %}
-                        <input type="submit" value="{% trans 'Go' %}" />
-                    </form>
-                {% else %}
-                    &nbsp;
-                {% endif %}
-            </div>
-            <div id="login" class="span-12 last">
+            <div id="login" class="span-18 last">
                 <span class="site-actions">
                     {% if user.last_name %}
                         <span>{{ user.first_name }} {{ user.last_name }}</span>
