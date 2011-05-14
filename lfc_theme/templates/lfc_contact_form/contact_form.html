@@ -1,0 +1,23 @@
+{% extends "lfc/base.html" %}
+{% load portlets_tags %}
+
+{% block section %}contact-form{% endblock %}
+
+{% block content %}
+    {% if self.display_title %}
+        <h1 class="first-heading">{{ self.title }}</h1>
+    {% endif %}
+    <div>
+        {% if sent %}
+            {{ self.thank_you_message|safe }}
+        {% else %}
+            <div>
+                {{ self.text|safe }}
+            </div>
+            <form method="post">
+                {% include "lfc/lfc_form.html" %}
+                <input type="submit" />
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

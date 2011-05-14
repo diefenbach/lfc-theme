@@ -1,0 +1,4 @@
+{% load lfc_tags %}{% for field in form %}{{ field.label }}:
+{{ field|field_value }}
+
+{% endfor %}
