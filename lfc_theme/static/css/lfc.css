@@ -25,6 +25,14 @@ code {
     color: black
 }
 
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
 code a,
 code a:visited {
     color: black !important;
