@@ -26,7 +26,7 @@
 
     </head>
     <body class="{{ lfc_context.slug }} {% block section %}{% endblock %}">
-
+        {{ sql_queries|length }}
         {% include "lfc/management.html" %}
         {% include "lfc/header.html" %}
         {% include "lfc/tabs.html" %}

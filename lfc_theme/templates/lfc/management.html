@@ -18,7 +18,7 @@
                     {% if lfc_context %}
                         | <a class="site-action" href="{% url lfc_manage_object lfc_context.id %}">{% trans "Manage" %}</a>
                     {% else %}
-                        | <a class="site-action" href="{% url lfc_manage_portal %}#type=portal&amp;id=1">{% trans "Manage" %}</a>
+                        | <a class="site-action" href="{% url lfc_manage_portal %}">{% trans "Manage" %}</a>
                     {% endif %}
                 </span>
             </div>
