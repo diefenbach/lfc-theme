@@ -414,25 +414,6 @@ div.search-results {
     font-weight: bold;
 }
 
-/* scrollable */
-div.scrollable {
-    position:relative;
-    overflow:hidden;
-    width: 400px;
-    height:100px;
-}
-
-div.scrollable div.items {
-    width:20000em;
-    position:absolute;
-    clear:both;
-}
-
-div.scrollable div.items div {
-    width: 400px;
-    height:100px;
-}
-
 table.gallery {
     width: 100%;
 }
