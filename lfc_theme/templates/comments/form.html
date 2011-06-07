@@ -3,7 +3,7 @@
 
     <form action="{% comment_form_target %}"
           method="post">
-
+      {% csrf_token %}
       {% for field in form %}
           {% if field.is_hidden %}
               {{ field }}

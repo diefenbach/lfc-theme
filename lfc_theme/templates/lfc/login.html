@@ -11,7 +11,9 @@
         </p>
         
         <form class="login-form" 
-              action="{{ app_path }}" method="post" id="login-form">
+              action="{{ app_path }}" 
+              id="login-form"
+              method="POST">
             {% csrf_token %}
             {% include "lfc/lfc_form.html" %}
 

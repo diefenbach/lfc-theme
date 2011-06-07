@@ -14,7 +14,8 @@
             <div>
                 {{ self.text|safe }}
             </div>
-            <form method="post">
+            <form method="POST">
+                {% csrf_token %}
                 {% include "lfc/lfc_form.html" %}
                 <input type="submit" />
             </form>
