@@ -2,10 +2,10 @@
 
 {% if show_level %}
     {% if objs %}
-        <ul>
+        <ul class="level-{{ level }}">
             {% for obj in objs %}
-                <li class="{% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} level-{{ obj.level }} {% if obj.is_current %}current{% endif %}">
-                    <a class="level-{{ obj.level }} {% if obj.is_current %}current{% endif %}"
+                <li class="{% if forloop.first %}first {% endif %}{% if forloop.last %}last {% endif %}{% if obj.is_current %}current{% endif %}">
+                    <a class="{% if forloop.first %}first {% endif %}{% if forloop.last %}last {% endif %}{% if obj.is_current %}current{% endif %}"
                        href="{{ obj.url }}">
                         {{ obj.title }}
                     </a>
