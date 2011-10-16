@@ -12,7 +12,7 @@
             {{ self.thank_you_message|safe }}
         {% else %}
             <div>
-                {{ self.text|safe }}
+                {{ self.text_rendered|safe }}
             </div>
             <form method="POST">
                 {% csrf_token %}
