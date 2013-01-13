@@ -206,6 +206,7 @@ ul.breadcrumbs li {
     width: 300px;
 }
 
+#id_username,
 #content input[type="password"] {
     width: 300px;
 }
