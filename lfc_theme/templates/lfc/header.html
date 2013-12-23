@@ -2,16 +2,16 @@
 {% load lfc_tags %}
 
 <div id="header">
-    {% if LFC_MULTILANGUAGE %}
-        <div class="container logo">
-            <div class="span-18">
-                <h1 class="logo"><a href="/{{ LINK_LANGUAGE }}">LFC</a></h1>
-            </div>
-            <div class="span-6 last flags">
-                &nbsp;
-                {% if not user.is_authenticated %}
-                    <a href="{% url lfc_login %}">{% trans "Login" %}</a> |
-                {% endif %}
+    <div class="container logo">
+        <div class="span-18">
+            <h1 class="logo"><a href="/{{ LINK_LANGUAGE }}">LFC</a></h1>
+        </div>
+        <div class="span-6 last flags">
+            {% if not user.is_authenticated %}
+                <a href="{% url lfc_login %}">{% trans "Login" %}</a>
+            {% endif %}
+            {% if LFC_MULTILANGUAGE %}
+                |
                 {% lfc_languages %}
                 {% for language in lfc_languages %}
                     {% if language.is_available %}
@@ -27,19 +27,7 @@
                     {% endif %}
                         {% if not forloop.last %}|{% endif %}
                 {% endfor %}
-            </div>
+            {% endif %}
         </div>
-    {% else %}
-        <div class="container logo">
-            <div class="span-18">
-                <h1 class="logo"><a href="/{{ LINK_LANGUAGE }}">LFC</a></h1>
-            </div>
-            <div class="span-6 last flags">
-                &nbsp;
-                {% if not user.is_authenticated %}
-                    <a href="{% url lfc_login %}">{% trans "Login" %}</a>
-                {% endif %}
-            </div>
-        </div>
-    {% endif %}
+    </div>
 </div>
