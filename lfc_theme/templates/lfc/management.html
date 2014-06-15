@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load lfc_tags %}
 
-{% if user.is_authenticated %}    
+{% if user.is_authenticated %}
     <div id="management">
         <div class="container">
             <div class="span-6">
@@ -14,11 +14,11 @@
                     {% else %}
                         <span>{{ user.username }}</span>
                     {% endif %}
-                    | <a class="site-action" href="{% url lfc_logout %}">{% trans "Logout" %}</a>
+                    | <a class="site-action" href="{% url 'lfc_logout' %}">{% trans "Logout" %}</a>
                     {% if lfc_context %}
-                        | <a class="site-action" href="{% url lfc_manage_object lfc_context.id %}">{% trans "Manage" %}</a>
+                        | <a class="site-action" href="{% url 'lfc_manage_object' lfc_context.id %}">{% trans "Manage" %}</a>
                     {% else %}
-                        | <a class="site-action" href="{% url lfc_manage_portal %}">{% trans "Manage" %}</a>
+                        | <a class="site-action" href="{% url 'lfc_manage_portal' %}">{% trans "Manage" %}</a>
                     {% endif %}
                 </span>
             </div>

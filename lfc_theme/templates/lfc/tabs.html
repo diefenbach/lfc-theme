@@ -9,8 +9,8 @@
         <div class="span-8 last search-form">
             {% if IS_DEFAULT_LANGUAGE %}
                 <form id="search-form"
-                      data='{% url lfc_live_search language=LANGUAGE_CODE %}'
-                      action='{% url lfc_search %}'>
+                      data="{% url 'lfc_live_search' language=LANGUAGE_CODE %}"
+                      action="{% url 'lfc_search' %}">
                     <input type="text"
                            class="search"
                            name="q" />
@@ -21,8 +21,8 @@
                 </form>
             {% else %}
                 <form id="search-form"
-                      data='{% url lfc_live_search language=LANGUAGE_CODE %}'
-                      action='{% url lfc_search language=LANGUAGE_CODE %}'>
+                      data="{% url 'lfc_live_search' language=LANGUAGE_CODE %}"
+                      action="{% url 'lfc_search' language=LANGUAGE_CODE %}">
                     <input type="text"
                            class="search"
                            name="q" />

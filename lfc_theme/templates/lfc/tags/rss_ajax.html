@@ -2,7 +2,7 @@
 
 <script>
     $(function() {
-        $.get("{% url lfc_rss_get_entries %}?url={{ url }}", function(result) {
+        $.get("{% url 'lfc_rss_get_entries' %}?url={{ url }}", function(result) {
             $("#{{ id }}").html(result);
         })
     });
