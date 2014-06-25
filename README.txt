@@ -1,7 +1,12 @@
-What is it?
-===========
+Introduction
+============
 
-The default theme for `LFC <http://pypi.python.org/pypi/django-lfc/>`_.s
+LFC THeme is the default theme for `LFC`_, a Content Management System (CMS)
+based on Django.
+
+See `LFC`_ for more information.
+
+.. _`LFC`: http://pypi.python.org/pypi/django-lfc
 
 Changes
 =======
