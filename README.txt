@@ -1,7 +1,7 @@
 Introduction
 ============
 
-LFC THeme is the default theme for `LFC`_, a Content Management System (CMS)
+LFC Theme is the default theme for `LFC`_, a Content Management System (CMS)
 based on Django.
 
 See `LFC`_ for more information.
