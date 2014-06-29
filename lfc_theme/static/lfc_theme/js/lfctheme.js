@@ -19,7 +19,6 @@ $.fn.delay = function(options) {
 };
 
 $(function() {
-
     $("a.lightbox").lightBox();
 
     $("#search-form").keypress(function(e) {
@@ -88,7 +87,7 @@ $(function() {
         event: "keyup",
         fn: function(e) {
             if (e.keyCode in {13:1, 27:1, 38:1, 39:1, 40:1} == false) {
-                var q = $(".search").attr("value");
+                var q = $(".search").val();
                 if (q.length == 0) {
                     $("#live-search-results").hide();
                 }

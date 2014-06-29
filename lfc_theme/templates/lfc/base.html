@@ -15,23 +15,21 @@
         <meta name="generator" content="LFC - Lightning Fast CMS" />
         {% if lfc_context.get_meta_keywords %}<meta name="keywords" content="{{ lfc_context.get_meta_keywords }}" />{% endif %}
         {% if lfc_context.get_meta_description %}<meta name="description" content="{{ lfc_context.get_meta_description }}" />{% endif %}
-        <link rel="shortcut icon" href="{{ STATIC_URL }}lfc/img/favicon.ico" type="image/ico" />
+        <link rel="shortcut icon" href="{{ STATIC_URL }}lfc_theme/lfc/img/favicon.ico" type="image/ico" />
 
         {% compress css %}
-            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}yui/reset-fonts.css" />
-            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}blueprint/src/grid.css" />
-            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}jquery/lightbox/jquery.lightbox-0.5.css" />
-            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/tiny.css" />
-            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/lfc.css" />
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lfc_theme/yui/reset-fonts.css" />
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lfc_theme/blueprint/src/grid.css" />
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lfc_theme/lightbox/jquery.lightbox-0.5.css" />
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lfc_theme/css/lfc.css" />
         {% endcompress %}
 
         {% block css %}{% endblock %}
 
         {% compress js %}
-            <script type="text/javascript" src="{{ STATIC_URL }}jquery/jquery.min.js"></script>
-            <script type="text/javascript" src="{{ STATIC_URL }}jquery/jquery.tools.min.js"></script>
-            <script type="text/javascript" src="{{ STATIC_URL }}jquery/lightbox/jquery.lightbox-0.5.js"></script>
-            <script type="text/javascript" src="{{ STATIC_URL }}js/lfctheme.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfc_theme/jquery/jquery-1.11.1.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfc_theme/lightbox/jquery.lightbox-0.5.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfc_theme/js/lfctheme.js"></script>
         {% endcompress %}
 
         {% block js %}{% endblock %}
