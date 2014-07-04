@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1b1'
+version = '1.2'
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.txt')).read()
@@ -12,7 +12,7 @@ setup(
     description='The default theme for LFC',
     long_description=README,
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
         'License :: OSI Approved :: BSD License',
