@@ -10,9 +10,8 @@ from portlets.models import Slot
 
 register = Library()
 
+
 class SlotsInformationNode(Node):
-    """
-    """
     def render(self, context):
         obj = context.get("lfc_context")
         request = context.get("request")
@@ -35,7 +34,7 @@ class SlotsInformationNode(Node):
             obj = obj.get_content_object()
 
         for slot in Slot.objects.all():
-            context["Slot%s" % slot.name] = portlets.utils.has_portlets(obj, slot)
+            context["Slot%s" % slot.name] = slot.has_portlets(obj)
 
         if context["SlotLeft"] and context["SlotRight"]:
             content_class = "span-13 append-1"
@@ -47,13 +46,14 @@ class SlotsInformationNode(Node):
             content_class = "span-24 last"
 
         cache.set(cache_key, {
-            "content_class" : content_class,
-            "SlotLeft" : context["SlotLeft"],
-            "SlotRight" : context["SlotRight"],
+            "content_class": content_class,
+            "SlotLeft": context["SlotLeft"],
+            "SlotRight": context["SlotRight"],
         })
 
         context["content_class"] = content_class
         return ''
+
 
 def do_slots_information(parser, token):
     """Calculates some context variables based on displayed slots.
