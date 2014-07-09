@@ -44,7 +44,7 @@
             <div id="content">
                 <div class="container">
                     {% if SlotLeft %}
-                        <div class="span-5">
+                        <div class="{{ left_class }}">
                             <div class="left-slot">
                                 {% block left-slot %}
                                     {% portlet_slot 'Left' lfc_context %}
@@ -64,7 +64,7 @@
                     </div>
 
                     {% if SlotRight %}
-                        <div class="span-5 last">
+                        <div class="{{ right_class }}">
                             <div class="rights-slot">
                                 {% block right-slot %}
                                     {% portlet_slot 'Right' lfc_context %}
