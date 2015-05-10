@@ -16,7 +16,7 @@
                     {% endif %}
                     | <a class="site-action" href="{% url 'lfc_logout' %}">{% trans "Logout" %}</a>
                     {% if lfc_context %}
-                        | <a class="site-action" href="{% url 'lfc_manage_object' lfc_context.id %}">{% trans "Manage" %}</a>
+                        | <a class="site-action" {% ifhasperm view_management %}href="{% url 'lfc_manage_object' lfc_context.id %}{% endifhasperm %}">{% trans "Manage" %}</a>
                     {% else %}
                         | <a class="site-action" href="{% url 'lfc_manage_portal' %}">{% trans "Manage" %}</a>
                     {% endif %}
